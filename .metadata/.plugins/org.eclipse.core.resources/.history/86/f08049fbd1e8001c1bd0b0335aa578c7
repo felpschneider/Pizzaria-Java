@@ -1,9 +1,0 @@
-package org.generation.brazil;
-
-public class TelaInicial {
-
-	public static void SaudarUsuario() {
-		
-	}
-	
-}
