@@ -1,12 +1,13 @@
 package org.generation.brazil;
 
 public class ClasseMain {
-
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) throws InterruptedException {
 
 		TelaInicial saudacao = new TelaInicial();
 		
 		saudacao.SaudarUsuario();
+		saudacao.EscolherOpcoesMenu();
 		
 	}
 

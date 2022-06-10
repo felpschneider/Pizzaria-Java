@@ -1,0 +1,4 @@
+1654878338271	Convert local variable 'lerRespostas' to field
+1654878604843	Convert local variable 'escolha' to field
+1654878646372	Convert local variable 'escolha' to field
+1654878727026	Encapsulate field 'escolha'

@@ -1,0 +1,15 @@
+package org.generation.brazil;
+
+public class TelaInicial {
+
+	public void SaudarUsuario() {
+		System.out.println("Olá! Seja bem-vinde à Java's Pizzaria!");
+		System.out.println("Nesse aplicativo, você seleciona as opções selecionando os números"
+				+ " correspondentes a ela");
+		System.out.println("Para iniciar, fale pra nós: ");
+		System.out.println("1- Já sou cliente");
+		System.out.println("2- Quero me cadastrar");
+		System.out.println("3- Sair");
+	}
+	
+}
