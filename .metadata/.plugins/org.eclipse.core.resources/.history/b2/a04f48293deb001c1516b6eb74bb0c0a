@@ -10,10 +10,11 @@ public class Cadastro {
 		private String telefone;
 		private String endereco;
 		private String usuario;
-		private String senha;	
+		private String senha;
+		
+
 		
 		public void cadastreUsuario() {
-			System.out.println("Tela de cadastro");
 			System.out.println("Digite seu nome:");
 			setNome(leitor.next());
 			System.out.println("Digite seu telefone:");
@@ -75,4 +76,13 @@ public class Cadastro {
 			this.senha = senha;
 		}
 
+		public Cadastro getPessoa() {
+			return pessoa;
+		}
+
+		public void setPessoa(Cadastro pessoa) {
+			this.pessoa = pessoa;
+		}
+
+		
 }

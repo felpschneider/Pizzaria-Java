@@ -8,6 +8,8 @@ public class ClasseMain {
 		
 		ModoRetirarPedido retirar = new ModoRetirarPedido();
 		
+		
+				
 		saudacao.SaudarUsuario();
 		saudacao.EscolherOpcoesMenu();
 		

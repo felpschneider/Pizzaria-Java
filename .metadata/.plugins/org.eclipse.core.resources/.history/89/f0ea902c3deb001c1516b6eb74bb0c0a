@@ -10,10 +10,11 @@ public class Cadastro {
 		private String telefone;
 		private String endereco;
 		private String usuario;
-		private String senha;	
+		private String senha;
+		
+		
 		
 		public void cadastreUsuario() {
-			System.out.println("Tela de cadastro");
 			System.out.println("Digite seu nome:");
 			setNome(leitor.next());
 			System.out.println("Digite seu telefone:");

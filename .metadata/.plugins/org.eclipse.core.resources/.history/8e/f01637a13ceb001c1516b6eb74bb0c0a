@@ -10,21 +10,7 @@ public class Cadastro {
 		private String telefone;
 		private String endereco;
 		private String usuario;
-		private String senha;	
-		
-		public void cadastreUsuario() {
-			System.out.println("Tela de cadastro");
-			System.out.println("Digite seu nome:");
-			setNome(leitor.next());
-			System.out.println("Digite seu telefone:");
-			setTelefone(leitor.next());
-			System.out.println("Digite seu endereço:");
-			setEndereco(leitor.next());
-			System.out.println("Digite seu nome de usuario:");
-			setUsuario(leitor.next());
-			System.out.println("Digite sua senha:");
-			setSenha(leitor.next());
-		}
+		private String senha;
 		
 		
 		public Scanner getLeitor() {
@@ -75,4 +61,27 @@ public class Cadastro {
 			this.senha = senha;
 		}
 
+		public Cadastro getPessoa() {
+			return pessoa;
+		}
+
+		public void setPessoa(Cadastro pessoa) {
+			this.pessoa = pessoa;
+		}
+
+		Cadastro pessoa = new Cadastro();
+		
+		public void cadastreUsuario() {
+			System.out.println("Digite seu nome:");
+			pessoa.setNome(leitor.next());
+			System.out.println("Digite seu telefone:");
+			pessoa.setTelefone(leitor.next());
+			System.out.println("Digite seu endereço:");
+			pessoa.setEndereco(leitor.next());
+			System.out.println("Digite seu nome de usuario:");
+			pessoa.setUsuario(leitor.next());
+			System.out.println("Digite sua senha:");
+			pessoa.setSenha(leitor.next());
+		}
+		
 }

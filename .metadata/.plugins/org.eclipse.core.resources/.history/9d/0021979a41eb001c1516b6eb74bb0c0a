@@ -72,7 +72,7 @@ public class TelaInicial {
 			
 			if(cadastro.getSenha().equals(senhaDigitada = entrada.next())) {
 				
-				// joga pra próxima função: pedido
+				// joga pra próxima função
 
 			}else {
 				System.out.println("Senha incorreta!");
