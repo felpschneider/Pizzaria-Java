@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ModoRetirarPedido {
 	
+	private Cadastro cadastro = new Cadastro();
+	
 	static Scanner leia = new Scanner(System.in);
 	
 	private int modoEntrega;
@@ -22,8 +24,17 @@ public class ModoRetirarPedido {
 		if(modoEntrega == 1) {
 			System.out.println("-- RETIRADA NO LOCAL -- \n**Após confirmação do pagamento!!** ");
 		}else if( modoEntrega == 2) {
-			System.out.println("-- ENTREGA A DOMOCÍLIO -- \n*** Frete = GRÁTIS *** \nEndereço de entrega registrado em cadastro.");
+			System.out.println("-- ENTREGA A DOMOCÍLIO -- \n*** Frete = GRÁTIS *** "
+					+ "\nEndereço de entrega registrado em cadastro: " + cadastro.getEndereco());
 		}
+	}
+
+	public int getModoEntrega() { //getter
+		return modoEntrega;
+	}
+
+	public void setModoEntrega(int modoEntrega) { //setter
+		this.modoEntrega = modoEntrega;
 	}
 }
 	

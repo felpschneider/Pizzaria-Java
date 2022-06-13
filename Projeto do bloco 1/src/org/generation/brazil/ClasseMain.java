@@ -6,9 +6,14 @@ public class ClasseMain {
 
 		TelaInicial saudacao = new TelaInicial();
 		
+		ModoRetirarPedido retirar = new ModoRetirarPedido();
+		
+		
+				
 		saudacao.SaudarUsuario();
 		saudacao.EscolherOpcoesMenu();
 		
+		retirar.EscolherEntrega();
 	}
 
 }

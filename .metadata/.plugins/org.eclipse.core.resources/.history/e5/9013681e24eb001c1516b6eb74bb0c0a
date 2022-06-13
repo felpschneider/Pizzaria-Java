@@ -1,0 +1,18 @@
+package org.generation.brazil;
+
+public class ClasseMain {
+	
+	public static void main(String[] args) throws InterruptedException {
+
+		TelaInicial saudacao = new TelaInicial();
+		
+		ModoRetirarPedido retirar = new ModoRetirarPedido();
+		
+		EscolherEntrega();
+				
+//		saudacao.SaudarUsuario();
+//		saudacao.EscolherOpcoesMenu();
+		
+	}
+
+}
