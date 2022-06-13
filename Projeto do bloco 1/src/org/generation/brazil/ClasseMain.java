@@ -8,10 +8,15 @@ public class ClasseMain {
 		
 		ModoRetirarPedido retirar = new ModoRetirarPedido();
 		
+		Pagamentos pagamento = new Pagamentos();
+		
 		saudacao.SaudarUsuario();
 		saudacao.EscolherOpcoesMenu();
 		
 		retirar.EscolherEntrega();
+		
+		pagamento.escolhaDoPagamento();
+		
 	}
 
 }
