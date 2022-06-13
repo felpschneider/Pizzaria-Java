@@ -43,5 +43,19 @@ public class Cadastro {
 			this.senha = senha;
 		}
 		
+		Cadastro pessoa = new Cadastro();
+		
+		public void cadastreUsuario() {
+			System.out.println("Digite seu nome:");
+			pessoa.setNome(leitor.next());
+			System.out.println("Digite seu telefone:");
+			pessoa.setTelefone(leitor.next());
+			System.out.println("Digite seu endereço:");
+			pessoa.setEndereço(leitor.next());
+			System.out.println("Digite seu nome de usuario:");
+			pessoa.setUsuario(leitor.next());
+			System.out.println("Digite sua senha:");
+			pessoa.setSenha(leitor.next());
+		}
 		
 }
