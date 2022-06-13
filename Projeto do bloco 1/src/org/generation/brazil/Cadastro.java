@@ -6,25 +6,42 @@ public class Cadastro {
 		
 		Scanner leitor = new Scanner(System.in);
 		
-		String nome;
-		String telefone;
-		String endereço;
-		String usuario;
-		String senha;
-	
-	void cadastreUsuario() {
+		private String nome;
+		private String telefone;
+		private String endereço;
+		private String usuario;
+		private String senha;
 		
-		System.out.println("Digite seu nome completo:");
-		nome = leitor.next();
-		System.out.println("Digite seu telefone:");
-		telefone = leitor.next();
-		System.out.println("Digite seu endereço:");
-		endereço = leitor.next();
-		System.out.println("Escolha um nome de usuário: ");
-		usuario = leitor.next();
-		System.out.println("Crie uma senha:");
-		senha = leitor.next();
-		System.out.println("Usuário cadastrado.");
-	}
+		public String getNome() {
+			return nome;
+		}
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+		public String getTelefone() {
+			return telefone;
+		}
+		public void setTelefone(String telefone) {
+			this.telefone = telefone;
+		}
+		public String getEndereço() {
+			return endereço;
+		}
+		public void setEndereço(String endereço) {
+			this.endereço = endereço;
+		}
+		public String getUsuario() {
+			return usuario;
+		}
+		public void setUsuario(String usuario) {
+			this.usuario = usuario;
+		}
+		public String getSenha() {
+			return senha;
+		}
+		public void setSenha(String senha) {
+			this.senha = senha;
+		}
+		
 		
 }
