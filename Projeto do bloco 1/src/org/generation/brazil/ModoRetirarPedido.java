@@ -19,10 +19,19 @@ public class ModoRetirarPedido {
 		
 		int modoEntrega = leia.nextInt();
 		
-		if(modoEntrega == 1) {
+		switch(modoEntrega) {
+		case 1:
 			System.out.println("-- RETIRADA NO LOCAL -- \n**Após confirmação do pagamento!!** ");
-		}else if( modoEntrega == 2) {
+			break;
+		case 2:
 			System.out.println("-- ENTREGA A DOMOCÍLIO -- \n*** Frete = GRÁTIS *** \nEndereço de entrega registrado em cadastro.");
+			break;
+		default:
+			do {
+				System.out.println("Escolha uma opção válida:\n 'Digite 1 para retornar as opções...");
+				modoEntrega = leia.nextInt();
+			} while (modoEntrega != 1 && modoEntrega != 2);
+			EscolherEntrega();
 		}
 	}
 }
