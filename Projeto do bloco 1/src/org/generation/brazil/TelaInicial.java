@@ -1,16 +1,16 @@
 /*
  * 	Autor: Felipe Schneider - Turma 54 da Generation - grupo 4
- * 	Última alteração: 14h40min - Data: 10/06/2022 
+ * 	Última alteração: 13h24min - Data: 13/06/2022 
  */
 package org.generation.brazil;
 
 import java.util.Scanner;
 
 public class TelaInicial {
+
+	private Cadastro cadastro = new Cadastro();
 	
-	public Scanner lerRespostas = new Scanner(System.in);
-	
-	private int escolha;
+	public Scanner entrada = new Scanner(System.in);
 
 	public void SaudarUsuario() throws InterruptedException {
 		
@@ -32,34 +32,55 @@ public class TelaInicial {
 		Thread.sleep(1000);
 		System.out.print("Digite sua escolha: ");
 		
-		setEscolha(lerRespostas.nextInt());
+		int escolha = (entrada.nextInt());
 		
 		if(escolha == 1) {
 			logarUsuario();
+		} 
+		else if(escolha == 2) {
+			cadastro.cadastreUsuario();
+		}
+		else {
+			
 		}
 	}
 
-	public void logarUsuario() {
+	public void logarUsuario() throws InterruptedException{
 		
-		System.out.println("Faça seu login:");
-		System.out.print("Digite seu nome de usuário: ");
+		String nomeDigitado;
 		
-		System.out.print("Digite sua senha: ");
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	public int getEscolha() {
-		return escolha;
-	}
+		do {
+			System.out.println("Faça seu login");
+			System.out.print("Digite seu nome de usuário: ");	
+			
+		if(cadastro.getNome().equals(nomeDigitado = entrada.next())) {
+			
+			colocarSenha();
 
-	public void setEscolha(int escolha) {
-		this.escolha = escolha;
+		}else {
+			System.out.println("Login não encontrado!");
+		}
+		}while(!cadastro.getNome().equals(nomeDigitado));
 	}
+	
+	public void colocarSenha() throws InterruptedException{
+		
+		String senhaDigitada;
+		
+		do {
+			System.out.print("Digite sua senha: ");
+			
+			if(cadastro.getSenha().equals(senhaDigitada = entrada.next())) {
+				
+				// joga pra próxima função: pedido
+
+			}else {
+				System.out.println("Senha incorreta!");
+			}
+		}while(!cadastro.getSenha().equals(senhaDigitada));
+		
+	}
+	
+	
 	
 }
