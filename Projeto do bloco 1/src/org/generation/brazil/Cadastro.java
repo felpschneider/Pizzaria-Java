@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cadastro {
 		
-		Scanner leitor = new Scanner(System.in);
+		public Scanner leitor = new Scanner(System.in);
 		
 		private String nome;
 		private String telefone;
@@ -12,29 +12,28 @@ public class Cadastro {
 		private String usuario;
 		private String senha;	
 		
-		public void cadastreUsuario() {
-			System.out.println("Tela de cadastro");
-			System.out.println("Digite seu nome:");
-			setNome(leitor.next());
-			System.out.println("Digite seu telefone:");
-			setTelefone(leitor.next());
-			System.out.println("Digite seu endereço:");
-			setEndereco(leitor.next());
-			System.out.println("Digite seu nome de usuario:");
-			setUsuario(leitor.next());
-			System.out.println("Digite sua senha:");
-			setSenha(leitor.next());
+		public void cadastreUsuario() throws InterruptedException {
+			
+			
+			System.out.println(">>>>>> CADASTRO <<<<<<");
+			System.out.println("-> Digite seu nome: ");
+			nome = leitor.nextLine();
+			
+			System.out.println("-> Digite seu telefone:");
+			telefone = leitor.nextLine();
+			
+			System.out.println("-> Digite seu endereço:");
+			endereco = leitor.nextLine();
+			
+			System.out.println("-> Digite seu nome de usuario:");
+			usuario = leitor.nextLine();
+			
+			System.out.println("-> Digite sua senha:");
+			senha = leitor.nextLine();
+			
+		
 		}
 		
-		
-		public Scanner getLeitor() {
-			return leitor;
-		}
-
-		public void setLeitor(Scanner leitor) {
-			this.leitor = leitor;
-		}
-
 		public String getNome() {
 			return nome;
 		}
@@ -74,5 +73,7 @@ public class Cadastro {
 		public void setSenha(String senha) {
 			this.senha = senha;
 		}
+
+		
 
 }

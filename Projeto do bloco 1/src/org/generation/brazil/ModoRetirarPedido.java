@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class ModoRetirarPedido {
 	
-	static Scanner leia = new Scanner(System.in);
+	public Scanner leia = new Scanner(System.in);
 	
+	@SuppressWarnings("unused")
 	private int modoEntrega;
 	
 	public void EscolherEntrega() throws InterruptedException{

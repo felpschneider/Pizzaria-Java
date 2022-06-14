@@ -1,6 +1,6 @@
 /*
  * 	Autor: Felipe Schneider - Turma 54 da Generation - grupo 4
- * 	Última alteração: 13h24min - Data: 13/06/2022 
+ * 	Última alteração: 16h02min - Data: 14/06/2022 
  */
 package org.generation.brazil;
 
@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class TelaInicial {
 
 	private Cadastro cadastro = new Cadastro();
+	
+	private Menu menu = new Menu();
 	
 	public Scanner entrada = new Scanner(System.in);
 
@@ -26,9 +28,9 @@ public class TelaInicial {
 		
 		System.out.println("Para iniciar, fale para nós: ");
 		Thread.sleep(1000);
-		System.out.println("1- Já sou cliente");
-		System.out.println("2- Quero me cadastrar");
-		System.out.println("3- Sair");
+		System.out.println("1. Já sou cliente");
+		System.out.println("2. Quero me cadastrar");
+		System.out.println("3. Sair");
 		Thread.sleep(1000);
 		System.out.print("Digite sua escolha: ");
 		
@@ -39,6 +41,7 @@ public class TelaInicial {
 		} 
 		else if(escolha == 2) {
 			cadastro.cadastreUsuario();
+			logarUsuario();
 		}
 		else {
 			
@@ -53,14 +56,16 @@ public class TelaInicial {
 			System.out.println("Faça seu login");
 			System.out.print("Digite seu nome de usuário: ");	
 			
-		if(cadastro.getNome().equals(nomeDigitado = entrada.next())) {
-			
+		if(cadastro.getUsuario().equals(nomeDigitado = entrada.next())) {
+	
 			colocarSenha();
 
 		}else {
 			System.out.println("Login não encontrado!");
 		}
-		}while(!cadastro.getNome().equals(nomeDigitado));
+		
+		}while(!cadastro.getUsuario().equals(nomeDigitado));
+		
 	}
 	
 	public void colocarSenha() throws InterruptedException{
@@ -72,7 +77,7 @@ public class TelaInicial {
 			
 			if(cadastro.getSenha().equals(senhaDigitada = entrada.next())) {
 				
-				// joga pra próxima função: pedido
+				menu.Cardapio();
 
 			}else {
 				System.out.println("Senha incorreta!");

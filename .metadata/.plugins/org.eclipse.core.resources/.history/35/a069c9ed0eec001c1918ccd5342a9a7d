@@ -1,0 +1,85 @@
+package org.generation.brazil;
+
+import java.util.Scanner;
+
+public class Cadastro {
+		
+		public Scanner leitor = new Scanner(System.in);
+		
+		private String nome = "";
+		private String telefone = "";
+		private String endereco = "";
+		private String usuario = "";
+		private String senha = "";	
+		
+		
+		
+		public String getNome() {
+			return nome;
+		}
+
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+
+		public String getTelefone() {
+			return telefone;
+		}
+
+		public void setTelefone(String telefone) {
+			this.telefone = telefone;
+		}
+
+		public String getEndereco() {
+			return endereco;
+		}
+
+		public void setEndereco(String endereco) {
+			this.endereco = endereco;
+		}
+
+		public String getUsuario() {
+			return usuario;
+		}
+
+		public void setUsuario(String usuario) {
+			this.usuario = usuario;
+		}
+
+		public String getSenha() {
+			return senha;
+		}
+
+		public void setSenha(String senha) {
+			this.senha = senha;
+		}
+
+
+
+		public void cadastreUsuario() throws InterruptedException {
+			
+			TelaInicial logar = new TelaInicial();
+			
+			System.out.println(">>>>>> Tela de cadastro <<<<<<");
+			System.out.println("-> Digite seu nome: ");
+			setNome(leitor.nextLine().toString());
+			
+			System.out.println("-> Digite seu telefone:");
+			setTelefone(leitor.nextLine().toString());
+			
+			System.out.println("-> Digite seu endereço:");
+			setEndereco(leitor.nextLine().toString());
+			
+			System.out.println("-> Digite seu nome de usuario:");
+			setUsuario(leitor.nextLine().toString());
+			
+			System.out.println("-> Digite sua senha:");
+			setSenha(leitor.nextLine().toString());
+			
+			logar.logarUsuario();
+		}
+		
+		
+		
+
+}
