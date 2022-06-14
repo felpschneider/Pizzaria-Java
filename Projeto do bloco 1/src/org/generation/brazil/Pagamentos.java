@@ -6,11 +6,10 @@ public class Pagamentos {
 
 	public Scanner entrada = new Scanner(System.in);
 
-	double valorTotal = 60; // variavel declarada apenas para testes
+	Menu valorPizzas = new Menu();
+	
+	double valorTotal = valorPizzas.getTotalPizza() * 36; // variavel declarada apenas para testes
 
-	Pagamentos(){
-		// espaço para inserir variavel valor total entre parametros
-	}
 	
 	public void telaInicialPagamentos() throws InterruptedException {
 		System.out.printf("O valor total foi de R$%.2f.", valorTotal);
@@ -19,7 +18,8 @@ public class Pagamentos {
 	}
 
 	public void escolhaDoPagamento() throws InterruptedException {
-		System.out.println("\nEscolha o meio de pagamento:\n\n1- Cartão de Crédito/Débito/VR.\n2- Dinheiro.\n3- Pix.");
+		System.out.println("\nEscolha o meio de pagamento:\n\n1- Cartão de Crédito/Débito/VR."
+				+ "\n2- Dinheiro.\n3- Pix.");
 		Thread.sleep(1000);
 		System.out.println("\nDigite o número do meio escolhido: ");
 		Thread.sleep(1000);

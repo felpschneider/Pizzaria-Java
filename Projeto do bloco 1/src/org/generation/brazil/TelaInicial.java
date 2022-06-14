@@ -21,6 +21,8 @@ public class TelaInicial {
 		System.out.println("Nesse aplicativo, você seleciona as opções selecionando os números"
 				+ " correspondentes a ela");
 		Thread.sleep(2500);
+		
+		EscolherOpcoesMenu();
 
 	}
 	
@@ -54,6 +56,7 @@ public class TelaInicial {
 		
 		do {
 			System.out.println("Faça seu login");
+			Thread.sleep(1300);
 			System.out.print("Digite seu nome de usuário: ");	
 			
 		if(cadastro.getUsuario().equals(nomeDigitado = entrada.next())) {
@@ -62,6 +65,7 @@ public class TelaInicial {
 
 		}else {
 			System.out.println("Login não encontrado!");
+			Thread.sleep(1500);
 		}
 		
 		}while(!cadastro.getUsuario().equals(nomeDigitado));
@@ -81,6 +85,7 @@ public class TelaInicial {
 
 			}else {
 				System.out.println("Senha incorreta!");
+				Thread.sleep(1500);
 			}
 		}while(!cadastro.getSenha().equals(senhaDigitada));
 		

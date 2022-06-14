@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 public class Menu {
 	
-	public void Cardapio() {
+	private int totalPizza;
+	
+	public void Cardapio() throws InterruptedException {
+		
+		Opcionais opcionais = new Opcionais();
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int pizza = 0, quant1 = 0, quant2 = 0, quant3 = 0, quant4 = 0, quant5 = 0, totalpi = 0;
+		int pizza = 0, quant1 = 0, quant2 = 0, quant3 = 0, quant4 = 0, quant5 = 0;
 		@SuppressWarnings("unused")
 		String continuar;
 		
@@ -22,7 +26,7 @@ public class Menu {
 		System.out.println("4. Frango c/ Catupiry	R$36,00");
 		System.out.println("5. Portuguesa		R$36,00");
 		
-		// adicionar comando ex: digite o numero da pizza
+		System.out.println("Digite o número da pizza que você quer:");
 		
 		pizza = sc.nextInt();
 		
@@ -64,15 +68,25 @@ public class Menu {
 		break;
 		}
 
-		totalpi = quant1 + quant2 + quant3 + quant4 + quant5;
+		totalPizza = quant1 + quant2 + quant3 + quant4 + quant5;
 		
 		}
 		while(!sc.next().equals("n".toLowerCase()));
 		
-		System.out.println("Você está pedindo " + totalpi + " pizzas");
+		System.out.println("Você está pedindo " + totalPizza + " pizzas");
 		
-		sc.close();	
-		
+		opcionais.EscolherOpcoes();
 	}
+
+	public int getTotalPizza() {
+		return totalPizza;
+	}
+
+	public void setTotalPizza(int totalPizza) {
+		this.totalPizza = totalPizza;
+	}
+	
+	
+	
 	}
 
