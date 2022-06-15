@@ -4,19 +4,10 @@ public class ClasseMain {
 	
 	public static void main(String[] args) throws InterruptedException {
 
-		TelaInicial saudacao = new TelaInicial();
+		TelaInicial iniciarPrograma = new TelaInicial();
 		
-		ModoRetirarPedido retirar = new ModoRetirarPedido();
-		Pagamentos pagamento = new Pagamentos();
-		Opcionais opcionais = new Opcionais();
-		
-		saudacao.SaudarUsuario();
-		
-		retirar.EscolherEntrega();
-		
-		pagamento.escolhaDoPagamento();
+		iniciarPrograma.SaudarUsuario();
 
-		
 	}
 
 }

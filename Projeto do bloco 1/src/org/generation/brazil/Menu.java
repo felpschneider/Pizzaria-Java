@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class Menu {
 	
-	private int totalPizza;
+	public int totalPizza;
+	private Scanner sc;
 	
 	public void Cardapio() throws InterruptedException {
 		
 		Opcionais opcionais = new Opcionais();
 		
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		
 		int pizza = 0, quant1 = 0, quant2 = 0, quant3 = 0, quant4 = 0, quant5 = 0;
 		@SuppressWarnings("unused")
@@ -33,38 +34,50 @@ public class Menu {
 		switch(pizza) {
 		case 1:
 			System.out.println("Você escolheu a pizza de Mussarela!");
-			System.out.println("Quantas você deseja?");
+			System.out.println("-> Quantas você deseja?");
+			Thread.sleep(1000);
 			quant1 = sc.nextInt();
-			System.out.println("Deseja mais alguma pizza? (S ou N)");
+			System.out.println("->Deseja mais alguma pizza? (S ou N)");
+			Thread.sleep(1560);
 		break;
 		case 2:
 			System.out.println("Você escolheu a pizza de Calabresa!");
-			System.out.println("Quantas você deseja?");
+			System.out.println("-> Quantas você deseja?");
+			Thread.sleep(1000);
 			quant2 = sc.nextInt();
-			System.out.println("Deseja mais alguma pizza? (S ou N)");
+			System.out.println("->Deseja mais alguma pizza? (S ou N)");
+			Thread.sleep(1560);
 		break;
 		case 3:
 			System.out.println("Você escolheu a pizza de Moda da casa!");
-			System.out.println("Quantas você deseja?");
+			System.out.println("-> Quantas você deseja?");
+			Thread.sleep(1000);
 			quant3 = sc.nextInt();
-			System.out.println("Deseja mais alguma pizza? (S ou N)");
+			System.out.println("->Deseja mais alguma pizza? (S ou N)");
+			Thread.sleep(1560);
 		break;
 		case 4:
 			System.out.println("Você escolheu a pizza de Frango c/ Catupiry!");
-			System.out.println("Quantas você deseja?");
+			System.out.println("-> Quantas você deseja?");
+			Thread.sleep(1000);
 			quant4 = sc.nextInt();
-			System.out.println("Deseja mais alguma pizza? (S ou N)");
+			System.out.println("->Deseja mais alguma pizza? (S ou N)");
+			Thread.sleep(1560);
 		break;
 		case 5:
 			System.out.println("Você escolheu a pizza de Portuguesa! \n");
-			System.out.println("Quantas você deseja?");
+			System.out.println("-> Quantas você deseja?");
+			Thread.sleep(1000);
 			quant5 = sc.nextInt();
-			System.out.println("Deseja mais alguma pizza? (S ou N)");
+			System.out.println("->Deseja mais alguma pizza? (S ou N)");
+			Thread.sleep(1560);
 			
 		break;
 		default:
 			System.out.println("Opção inválida!");
+			Thread.sleep(800);
 			System.out.println("Deseja escolher alguma pizza? (S ou N)");
+			Thread.sleep(1060);
 		break;
 		}
 
@@ -74,17 +87,17 @@ public class Menu {
 		while(!sc.next().equals("n".toLowerCase()));
 		
 		System.out.println("Você está pedindo " + totalPizza + " pizzas");
+		Thread.sleep(1500);
+		
+		totalPizza = (totalPizza * 36);
 		
 		opcionais.EscolherOpcoes();
 	}
 
-	public int getTotalPizza() {
-		return totalPizza;
-	}
+	
+	
 
-	public void setTotalPizza(int totalPizza) {
-		this.totalPizza = totalPizza;
-	}
+	
 	
 	
 	

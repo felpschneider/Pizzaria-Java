@@ -1,7 +1,3 @@
-/*
- * 	Autor: Felipe Schneider - Turma 54 da Generation - grupo 4
- * 	Última alteração: 16h02min - Data: 14/06/2022 
- */
 package org.generation.brazil;
 
 import java.util.Scanner;

@@ -1,3 +1,8 @@
 1655128709693	Delete element
 1655128910504	Encapsulate field 'modoEntrega'
 1655231763470	Convert local variable 'nome' to field
+1655249104234	Encapsulate field 'valorTotal'
+1655249980409	Convert local variable 'sc' to field
+1655249999037	Convert local variable 'sc' to field
+1655250050235	Convert local variable 'sc' to field
+1655250166000	Convert local variable 'valorPago' to field

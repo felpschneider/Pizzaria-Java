@@ -1,0 +1,17 @@
+package org.generation.brazil;
+
+public class ClasseMain {
+	
+	public static void main(String[] args) throws InterruptedException {
+
+		TelaInicial saudacao = new TelaInicial();
+		Pagamentos pagamento = new Pagamentos();
+		
+		saudacao.SaudarUsuario();
+		
+		pagamento.telaInicialPagamentos();
+
+		
+	}
+
+}

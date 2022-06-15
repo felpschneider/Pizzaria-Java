@@ -4,20 +4,25 @@ import java.util.Scanner;
 
 public class Opcionais {
 	
+	private Scanner sc;
+
 	public void EscolherOpcoes() throws InterruptedException {
 		
-		Scanner sc = new Scanner(System.in);
+		Bebidas bebidas = new Bebidas();
 		
+		sc = new Scanner(System.in);
+		
+		@SuppressWarnings("unused")
 		int opcionais, quant1 = 0, quant2 = 0, totalop = 0;
 		
 		do {
-		System.out.println(" =========OPCIONAIS=========");
+		System.out.println("======= OPCIONAIS =======");
 		System.out.println();
 		
 		System.out.println("1. Borda recheada");
 		System.out.println("2. Catupiry Extra");
 		Thread.sleep(1500);
-		System.out.println(" =====ESCOLHA UMA OPÇÃO=====");
+		System.out.println("==== ESCOLHA UMA OPÇÃO ====");
 		Thread.sleep(800);
 		
 		opcionais = sc.nextInt();
@@ -36,17 +41,16 @@ public class Opcionais {
 			Thread.sleep(1500);
 		}
 		
-		totalop = quant1 + quant2;
+
 		
 		
 		System.out.println("Deseja outra opcional? [s,n]-->");
 		Thread.sleep(1000);
 		}
-		while(sc.next().equals("s".toLowerCase()));	
+		while(sc.next().equals("s".toLowerCase()));		
 
-		System.out.println("Você escolheu " + totalop + " opcional");
+		bebidas.catalogoBebidas();
 		
-
 	}
 
 }

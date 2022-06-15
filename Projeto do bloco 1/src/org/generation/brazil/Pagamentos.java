@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class Pagamentos {
 
 	public Scanner entrada = new Scanner(System.in);
-
-	Menu valorPizzas = new Menu();
 	
-	double valorTotal = valorPizzas.getTotalPizza() * 36; // variavel declarada apenas para testes
+	private double valorPizzas = 144;
 
-	
+	@SuppressWarnings("unused")
+	private double valorPago;
+
 	public void telaInicialPagamentos() throws InterruptedException {
-		System.out.printf("O valor total foi de R$%.2f.", valorTotal);
+		System.out.println("O valor total foi de R$" + valorPizzas);
 		Thread.sleep(1000);
 		escolhaDoPagamento();
 	}
 
 	public void escolhaDoPagamento() throws InterruptedException {
-		System.out.println("\nEscolha o meio de pagamento:\n\n1- Cartão de Crédito/Débito/VR."
-				+ "\n2- Dinheiro.\n3- Pix.");
+		System.out.println("\nEscolha o meio de pagamento:\n\n1. Cartão de Crédito/Débito/VR."
+				+ "\n2. Dinheiro.\n3. Pix.");
 		Thread.sleep(1000);
 		System.out.println("\nDigite o número do meio escolhido: ");
 		Thread.sleep(1000);
@@ -47,7 +47,7 @@ public class Pagamentos {
 	}
 
 	public void pagamentoDinheiro() throws InterruptedException {
-		System.out.println("Pagamento em Dinheiro selecionado.\nPrecisa de troco?\n1- Sim.\n2- Não.");
+		System.out.println("Pagamento em Dinheiro selecionado.\nPrecisa de troco?\n1. Sim.\n2. Não.");
 		Thread.sleep(1500);
 		byte troco = entrada.nextByte();
 		Thread.sleep(500);
@@ -68,11 +68,11 @@ public class Pagamentos {
 
 	public void sistemaDeTroco() throws InterruptedException {
 		System.out.println("Para quanto?");
-		double valorPago = entrada.nextDouble();
+		valorPago = entrada.nextDouble();
 		Thread.sleep(500);
 
-		double troco = valorPago - valorTotal;
-		System.out.printf("Levaremos seu troco de R$%.2f.\n", troco);
+		double troco = valorPago - valorPizzas;
+		System.out.printf("Levaremos seu troco de R$" + troco);
 	}
 
 	public void pagamentoEmPix() throws InterruptedException {
