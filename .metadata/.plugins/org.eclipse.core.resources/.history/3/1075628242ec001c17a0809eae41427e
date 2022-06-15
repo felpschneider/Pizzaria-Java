@@ -33,7 +33,7 @@ public class TelaInicial {
 		System.out.print("Digite sua escolha: ");
 		
 		int escolha = (entrada.nextInt());
-		
+		do {
 		if(escolha == 1) {
 			logarUsuario();
 		} 
@@ -48,7 +48,7 @@ public class TelaInicial {
 		} else {
 			System.out.println("Opção inválida!");
 		}
-
+		}while();
 	}
 
 	public void logarUsuario() throws InterruptedException{

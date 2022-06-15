@@ -201,8 +201,6 @@ public class Pagamentos {
 			pagamentoPorCartao();
 		}
 
-		finalizarPedido.Finalizar();
-		
 	}
 
 	public void mudarPagamento() throws InterruptedException {

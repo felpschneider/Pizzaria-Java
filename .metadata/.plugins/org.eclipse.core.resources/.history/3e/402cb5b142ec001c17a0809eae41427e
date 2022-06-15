@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Pagamentos {
 
-	private EntregarRetirar finalizarPedido = new EntregarRetirar();
+	private Finalizar finalizarPedido = new Finalizar();
 	
 	public Scanner entrada = new Scanner(System.in);
 	
@@ -67,7 +67,7 @@ public class Pagamentos {
 			pagamentoDinheiro();
 		}
 		
-		finalizarPedido.Finalizar();
+		Finalizar()
 	}
 
 	public void sistemaDeTroco() throws InterruptedException {
@@ -87,8 +87,6 @@ public class Pagamentos {
 		Thread.sleep(10000);
 		System.out.println("\nPagamento confirmado.");
 		Thread.sleep(1500);
-		
-		finalizarPedido.Finalizar();
 	}
 
 	public void pagamentoPorCartao() throws InterruptedException {
@@ -201,8 +199,6 @@ public class Pagamentos {
 			pagamentoPorCartao();
 		}
 
-		finalizarPedido.Finalizar();
-		
 	}
 
 	public void mudarPagamento() throws InterruptedException {

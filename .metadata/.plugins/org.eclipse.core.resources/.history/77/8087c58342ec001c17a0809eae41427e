@@ -33,7 +33,6 @@ public class TelaInicial {
 		System.out.print("Digite sua escolha: ");
 		
 		int escolha = (entrada.nextInt());
-		
 		if(escolha == 1) {
 			logarUsuario();
 		} 

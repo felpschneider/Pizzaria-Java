@@ -43,12 +43,9 @@ public class TelaInicial {
 		}
 		else if (escolha == 3){
 
-			System.out.println("Você saiu do programa");
+			System.out.println("");
 			
-		} else {
-			System.out.println("Opção inválida!");
 		}
-
 	}
 
 	public void logarUsuario() throws InterruptedException{
