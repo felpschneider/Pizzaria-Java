@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Menu {
 	
 	private static int totalPizza;
-	private static double valorPizza;
 	private static Scanner sc;
 	
 	public void Cardapio() throws InterruptedException {
@@ -100,9 +99,8 @@ public class Menu {
 		}
 	
 		public void setValorPizza(double valorPizza) {
-			this.valorPizza = totalPizza;
 			System.out.println(valorPizza);
 		}
-		
-		
-}
+	
+	}
+

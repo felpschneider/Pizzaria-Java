@@ -37,7 +37,7 @@ public class Cadastro {
 		}
 
 		public void setNome(String nome) {
-			Cadastro.nome = nome;
+			this.nome = nome;
 		}
 
 		public String getTelefone() {
@@ -45,7 +45,7 @@ public class Cadastro {
 		}
 
 		public void setTelefone(String telefone) {
-			Cadastro.telefone = telefone;
+			this.telefone = telefone;
 		}
 
 		public String getEndereco() {
@@ -53,7 +53,7 @@ public class Cadastro {
 		}
 
 		public void setEndereco(String endereco) {
-			Cadastro.endereco = endereco;
+			this.endereco = endereco;
 		}
 
 		public String getUsuario() {
@@ -61,7 +61,7 @@ public class Cadastro {
 		}
 
 		public void setUsuario(String usuario) {
-			Cadastro.usuario = usuario;
+			this.usuario = usuario;
 		}
 
 		public String getSenha() {
@@ -69,7 +69,7 @@ public class Cadastro {
 		}
 
 		public void setSenha(String senha) {
-			Cadastro.senha = senha;
+			this.senha = senha;
 		}
 
 		

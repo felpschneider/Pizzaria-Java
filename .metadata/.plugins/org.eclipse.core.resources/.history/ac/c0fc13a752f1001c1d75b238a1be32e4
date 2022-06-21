@@ -8,6 +8,7 @@ public class Pagamentos {
 	
 	public static Scanner entrada = new Scanner(System.in);
 	
+
 	private static double valorPago;
 
 	public static void telaInicialPagamentos() throws InterruptedException {

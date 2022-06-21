@@ -103,6 +103,6 @@ public class Menu {
 			this.valorPizza = totalPizza;
 			System.out.println(valorPizza);
 		}
-		
-		
-}
+	
+	}
+

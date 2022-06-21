@@ -13,6 +13,8 @@ public class ModoRetirarPedido {
 	
 	public void EscolherEntrega() throws InterruptedException{
 		
+		Pagamentos pagar = new Pagamentos();
+		
 		System.out.println("===== ENTREGA DO PEDIDO =====\n");
 		Thread.sleep(2000);
 		
@@ -46,7 +48,7 @@ public class ModoRetirarPedido {
 			EscolherEntrega();
 		}
 		
-		Pagamentos.telaInicialPagamentos();
+		pagar.telaInicialPagamentos();
 		
 	}
 	

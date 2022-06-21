@@ -100,9 +100,9 @@ public class Menu {
 		}
 	
 		public void setValorPizza(double valorPizza) {
-			this.valorPizza = totalPizza;
+			Menu.valorPizza = totalPizza;
 			System.out.println(valorPizza);
 		}
-		
-		
-}
+	
+	}
+
